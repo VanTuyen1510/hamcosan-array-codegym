@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Bài 1 :
+  let myArray = ["grape ","banana ","jackfruit ","watermelon "]
+  myArray = myArray.toString();
+  document.write("Sau khi toString : " + myArray);
+
+  document.write("<br>");
+
+
+
+  // Bài 2 :
+  const num = prompt("Nhập vào 1 số ");
+  const str1 = num.toString();
+  const result1 = [str1[0]];
+
+  for(let x=1; x<str1.length; x++)
+  {
+      if((str1[x-1]%2 === 0)&&(str1[x]%2 === 0))
+      {
+          result1.push('-', str1[x]);
+
+      }
+      else
+      {
+          result1.push(str1[x]);
+      }
+  }
+  console.log(result1.join(''));
+
+
+
+
+
+
+// Bài 3 :
+  let str = prompt("Nhập vào 1 chuỗi");
+  let UPPER =  'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+  let result = [];
+  console.log(str);
+  for(let x=0; x<str.length; x++)
+  {
+
+      if(UPPER.indexOf(str[x]) >= 0)
+      {
+          result.push(str[x].toLowerCase());
+      }
+      else if(LOWER.indexOf(str[x]) >= 0)
+      {
+          result.push(str[x].toUpperCase());
+      }
+      else
+      {
+          result.push(str[x]);
+      }
+  }
+  alert(result.join(''));
+
+
+
+
+
+
+</script>
+</html>
